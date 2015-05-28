@@ -26,8 +26,8 @@
 
 #define TRACE_SIZE 16
 
-bool zm_reload = false;
-bool zm_terminate = false;
+volatile bool zm_reload = false;
+volatile bool zm_terminate = false;
 
 RETSIGTYPE zm_hup_handler(int signal)
 {

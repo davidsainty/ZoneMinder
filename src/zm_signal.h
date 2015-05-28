@@ -34,8 +34,8 @@
 
 typedef RETSIGTYPE (SigHandler)( int );
 
-extern bool zm_reload;
-extern bool zm_terminate;
+extern volatile bool zm_reload;
+extern volatile bool zm_terminate;
 
 RETSIGTYPE zmc_hup_handler( int signal );
 RETSIGTYPE zmc_term_handler( int signal );
