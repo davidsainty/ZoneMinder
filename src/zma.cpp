@@ -131,8 +131,9 @@ int main( int argc, char *argv[] )
 			}
 			if ( zm_reload )
 			{
-				monitor->Reload();
 				zm_reload = false;
+				Info("Got signal, reloading");
+				monitor->Reload();
 			}
 			sigprocmask( SIG_UNBLOCK, &block_set, 0 );
 		}

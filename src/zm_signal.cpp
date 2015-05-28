@@ -31,7 +31,6 @@ volatile bool zm_terminate = false;
 
 RETSIGTYPE zm_hup_handler(int signal)
 {
-	Info("Got signal %d (%s), reloading", signal, strsignal(signal));
 	zm_reload = true;
 }
 
